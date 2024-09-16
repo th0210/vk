@@ -1,0 +1,101 @@
+@use "../setting/config";
+@use "../mixin/mixin";
+
+.lesson {
+    background-color: config.$sub-color;
+    margin-top: -11px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 25px;
+        background: url(../img/波線.png) no-repeat center right 1px/auto 80%;
+        position: absolute;
+        top: -21px;
+        left: 0;
+        transform: rotate(180deg);
+    }
+}
+
+.lesson__wave {
+    width: 100%;
+    height: 25px;
+    background: url(../img/波線.png) no-repeat center center/100% 80%;
+    margin-top: -3px;
+}
+
+.lesson__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 30px 376px 30px;
+}
+
+.lesson__title {
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    position: relative;
+
+    @include mixin.mq(tb) {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    &::before {
+        content: "";
+        width: 216px;
+        height: 216px;
+        background: url(../img/lesson__img1.png) no-repeat center center/cover;
+        position: absolute;
+        top: -34px;
+        left: -22px;
+    }
+
+    &::after {
+        content: "";
+        width: 232px;
+        height: 232px;
+        background: url(../img/lesson__img2.png) no-repeat center center/cover;
+        position: absolute;
+        top: -29px;
+        right: -28px;
+    }
+}
+
+.lesson__text {
+    line-height: 44px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 55px;
+
+    @include mixin.mq(tb) {
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    &:last-child {
+        margin-top: 16px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 254px;
+            height: 248px;
+            background: url(../img/lesson__img3.png) no-repeat center center/cover;
+            position: absolute;
+            bottom: -42px-248px;
+            left: 94px;
+        }
+    
+        &::after {
+            content: "";
+            width: 296px;
+            height: 296px;
+            background: url(../img/lesson__img4.png) no-repeat center center/cover;
+            position: absolute;
+            bottom: -32px-296px;
+            right: 25px;
+        }
+    }
+}

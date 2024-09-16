@@ -1,0 +1,96 @@
+@use "./setting/config";
+@use "./mixin/mixin";
+
+.decoration__small {
+    margin-top: 34px;
+}
+
+.decoration__small-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding-right: 8px;
+}
+
+.decoration__small-circle1,
+.decoration__small-circle2,
+.decoration__small-circle3,
+.decoration__small-circle4 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: block;
+}
+
+.decoration__small-circle1,
+.decoration__middle-circle1,
+.decoration__large-circle1 {
+    background-color: #FF6464;
+}
+
+.decoration__small-circle2,
+.decoration__middle-circle2,
+.decoration__large-circle2 {
+    background-color: #F8BE4E;
+}
+
+.decoration__small-circle3,
+.decoration__middle-circle3,
+.decoration__large-circle3 {
+    background-color: #29A0E6;
+}
+
+.decoration__small-circle4,
+.decoration__middle-circle4,
+.decoration__large-circle4 {
+    background-color: #FF6464;
+}
+
+.decoration__middle {
+    margin-top: 15px;
+
+    &.is-contact {
+        margin-top: 20px;
+    }
+}
+
+.decoration__middle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.decoration__middle-circle1,
+.decoration__middle-circle2,
+.decoration__middle-circle3,
+.decoration__middle-circle4 {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+}
+
+.decoration__large {
+    &.is-lesson {
+        margin-top: 15px;
+    }
+}
+
+.decoration__large-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.decoration__large-circle1,
+.decoration__large-circle2,
+.decoration__large-circle3,
+.decoration__large-circle4 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: block;
+}

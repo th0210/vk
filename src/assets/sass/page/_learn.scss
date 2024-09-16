@@ -1,0 +1,101 @@
+@use "../setting/config";
+@use "../mixin/mixin";
+
+.learn {
+    background-color: config.$main-color;
+    padding: 80px 30px 122px 30px;
+}
+
+.learn__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.learn__content {
+    max-width: 1000px;
+    background-color: #FEEED9;
+    border: 3px solid #272524;
+    border-radius: 20px;
+    margin: 10px auto 0 auto;
+    padding: 58px 100px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 163px;
+        height: 121px;
+        background: url(../img/pc.png) no-repeat center center/cover;
+        position: absolute;
+        top: -73px;
+        left: -163px;
+    }
+
+    &::after {
+        content: "";
+        width: 116px;
+        height: 97px;
+        background: url(../img/leaf1.png) no-repeat center center/cover;
+        position: absolute;
+        top: 20px;
+        right: -44px-116px;
+        transform: scale(-1, 1);
+    }
+}
+
+.learn__heading {
+    font-size: 24px;
+    color: #231816;
+    line-height: 35px;
+    letter-spacing: 0.77px;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 159px;
+        height: 160px;
+        background: url(../img/bear__learn.png) no-repeat center center/cover;
+        position: absolute;
+        top: -107px;
+        right: -51px;
+    }
+}
+
+.learn__bubble {
+    img {
+        width: 584px;
+        height: 60px;
+        margin: 0 auto;
+    }
+}
+
+.learn__video {
+    margin-top: 20px;
+
+    iframe {
+        aspect-ratio: 16/9;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.learn__icon1 {
+    width: 136px;
+    height: 175px;
+    background: url(../img/leaf2.png) no-repeat center center/cover;
+    position: absolute;
+    left: -28px-143px;
+    bottom: 40px;
+    transform: rotate(-6deg) scale(-1, 1);
+}
+
+.learn__icon2 {
+    width: 199px;
+    height: 148px;
+    background: url(../img/pc.png) no-repeat center center/cover;
+    position: absolute;
+    right: -9px-199px;
+    bottom: -88px;
+    transform: scale(-1, 1);
+}

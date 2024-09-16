@@ -1,0 +1,307 @@
+@use "../setting/config";
+@use "../mixin/mixin";
+
+.ad {
+    background-color: config.$sub-color;
+    padding: 148px 0 0 0;
+    position: relative;
+
+    &.is-second {
+        padding: 150px 0 0 0;
+    }
+}
+
+.ad__container {
+    max-width: 1000px;
+    background-color: config.$bg-color;
+    border-radius: 22px;
+    padding: 55px 71px 69px 71px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 172px;
+        height: 168px;
+        background: url(../img/ad__nut1.png) no-repeat center center/cover;
+        position: absolute;
+        top: -152px;
+        left: -40px-172px;
+
+        @include mixin.mq(pc2) {
+            width: 136px;
+            height: 130px;
+            top: -150px;
+            left: 120px;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 208px;
+        height: 170px;
+        background: url(../img/ad__leaf1.png) no-repeat center center/cover;
+        position: absolute;
+        top: -130px;
+        right: -44px-172px;
+
+        @include mixin.mq(pc2) {
+            width: 150px;
+            height: 146px;
+            top: -150px;
+            right: 70px;
+        }
+    }
+
+    &.is-second {
+        &::before {
+            @include mixin.mq(pc2) {
+                width: 136px;
+                height: 130px;
+                top: -235px;
+                left: 120px;
+            }
+        }
+    
+        &::after {
+            @include mixin.mq(pc2) {
+                width: 150px;
+                height: 146px;
+                top: -230px;
+                right: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .ad__container {
+        &.is-second {
+            &::before {
+                @include mixin.mq(pc2) {
+                    width: 136px;
+                    height: 130px;
+                    top: -230px;
+                    left: 120px;
+                }
+            }
+        
+            &::after {
+                @include mixin.mq(pc2) {
+                    width: 150px;
+                    height: 146px;
+                    top: -230px;
+                    right: 70px;
+                }
+            }
+        }
+    }
+}
+.ad__inner {
+    padding: 0 30px;
+
+    @include mixin.mq(pc2) {
+        padding-bottom: 50px;
+    }
+}
+
+.ad__icon1 {
+    content: "";
+    width: 114px;
+    height: 122px;
+    background: url(../img/ad__leaf2.png) no-repeat center center/cover;
+    position: absolute;
+    top: 83px;
+    left: -54px-114px;
+
+    @include mixin.mq(pc2) {
+        width: 94px;
+        height: 102px;
+        top: -115px;
+        left: 0px;
+    }
+
+    &.is-second {
+        @include mixin.mq(pc2) {
+            width: 94px;
+            height: 102px;
+            top: -160px;
+            left: -10px;
+        }
+    }
+}
+
+.ad__icon2 {
+    content: "";
+    width: 61px;
+    height: 109px;
+    background: url(../img/ad__nut2.png) no-repeat center center/cover;
+    position: absolute;
+    top: 132px;
+    right: -27px-102px;
+
+    @include mixin.mq(pc2) {
+        width: 51px;
+        height: 99px;
+        top: -110px;
+        right: -10px;
+    }
+
+    &.is-second {
+        @include mixin.mq(pc2) {
+            width: 51px;
+            height: 99px;
+            top: -140px;
+            right: -10px;
+        }
+    }
+}
+
+.ad__title {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 172px;
+        height: 187px;
+        background: url(../img/bear__ad.png) no-repeat center center/cover;
+        position: absolute;
+        top: -118px;
+        left: -146px;
+
+        @include mixin.mq(pc2) {
+            width: 152px;
+            height: 167px;
+            top: -110px;
+            left: -110px;
+        }
+    }
+}
+
+.ad__text {
+    color: #231816;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.ad__content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 31px;
+
+    &.is-second {
+        margin-top: 31px;
+    }
+}
+
+.ad__detail {
+    width: 458px;
+}
+
+.ad__detail-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 17px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.ad__detail-term {
+    width: 136px;
+    height: 38px;
+    font-weight: config.$normal;
+    background-color: config.$sub-color;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad__detail-description {
+    color: config.$sub-color;
+}
+
+.ad__img {
+    width: calc(100% - 458px - 40px); 
+    //↑100%からad__detailの幅と間(ad__content)のgapを引いたもの
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 96px;
+        height: 112px;
+        background: url(../img/bear__fv2.png) no-repeat center center/cover;
+        position: absolute;
+        top: 155px;
+        right: -14px;
+        transform: rotate(6deg);
+        filter: drop-shadow(2px 2px 0.5px rgb(0, 0, 0, 0.4));
+    }
+}
+
+.ad__button {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.ad__button-link {
+    @include mixin.button2(8px);
+    border-radius: 11px;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: none;
+        transform: translateY(8px);
+    }
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: 3.5px solid transparent;
+        border-bottom: 3.5px solid transparent;
+        border-left: 9px solid config.$bg-color;
+        border-right: 0;
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ad__top {
+    width: 100%;
+    transform: rotate(180deg);
+    position: absolute;
+    top: -173px;
+    left: 0;
+}
+
+.ad__bottom {
+    background-color: #C36518;
+}
+
+.ad__wave-top {
+    width: 100%;
+    height: 173px;
+    background: url(../img/subtract.png) no-repeat top center/100% 100%;
+    margin-bottom: 2px;
+}
+
+.ad__wave-bottom {
+    width: 100%;
+    height: 173px;
+    background: url(../img/subtract.png) no-repeat top -1px  center/100% 100%;
+}

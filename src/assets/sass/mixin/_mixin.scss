@@ -1,0 +1,26 @@
+@use "../setting/config";
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get(config.$breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin button($box-shadowY){
+    font-size: 22px;
+    font-weight: config.$bold;
+    background-color: config.$button-bg;
+    box-shadow: 0 $box-shadowY 0 #C36518;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button2($box-shadowY){
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: config.$bold;
+    background-color: config.$button-bg;
+    box-shadow: 0 $box-shadowY 0 #C36518;
+    padding: 20px 70px 19px 54px;
+}

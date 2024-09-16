@@ -1,0 +1,32 @@
+/*---これは変数を格納しているファイルです---*/
+
+/*---色---*/
+$main-color: #ED9D4B;
+$sub-color: #375FAF;
+$bg-color: #fff;
+$text-color: #000;
+$button-bg: #EC8A3A;
+
+/*---フォント---*/
+$main-font: "Zen Maru Gothic", serif;
+$sub-font: "Noto Sans JP", sans-serif;
+
+/*---文字の太さ---*/
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
+/*--- ブレークポイント ---*/
+$breakpoints: (
+    "sp": "screen and (max-width: 599px)", //599px以下
+    "tb2": "screen and (max-width: 900px)",//900px以下
+    "tb": "screen and (max-width: 1024px)", //1024px以下
+    "pc": "screen and (min-width: 1025px)", //1025px以上(pc表示全て)
+    "pc2": "screen and (max-width: 1300px)", //1300px以下
+    "pc3": "screen and (min-width: 1920px)", //1920px以上
+);
+
+/*---重なり---*/
+
